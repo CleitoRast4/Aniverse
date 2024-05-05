@@ -87,9 +87,9 @@ function closeDialog() {
     document.getElementById('custom-dialog').style.display = 'none';
 }
 
-const checkDevTools = () => {
+/*const checkDevTools = () => {
     if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
         document.body.innerHTML = '#';
     }
 };
-setInterval(checkDevTools, 1);
+setInterval(checkDevTools, 1);*/
