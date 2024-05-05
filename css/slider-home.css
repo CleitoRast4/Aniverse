@@ -1,0 +1,83 @@
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Ajuste a opacidade conforme necessário */
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 10;
+}
+
+.slide-info {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.watch-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; margin-bottom: 20px;
+    
+}
+
+.watch-button-slider {
+    width: 150px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.icon-container-slider {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-slide {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+.bookmarked {
+    fill: gold; /* Cor de preenchimento do ícone de bookmark */
+}

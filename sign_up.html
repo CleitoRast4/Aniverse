@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aniversite | Criar Conta</title>
+<link href="./css/sign_up.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="login-container">
+    <p class="login-title">Criar Conta</p>
+    <p class="login-description">Preencha os campos abaixo para criar uma conta.</p>
+
+    <form id="create-account-form">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <div class="input-group mb-3">
+                <input type="text" id="name" name="name" required class="form-control">
+                <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 960 960" fill="#9e9e9e">
+                        <path d="M480,480Q414,480 367,433Q320,386 320,320Q320,254 367,207Q414,160 480,160Q546,160 593,207Q640,254 640,320Q640,386 593,433Q546,480 480,480ZM160,720L160,688Q160,654 177.5,625.5Q195,597 224,582Q286,551 350,535.5Q414,520 480,520Q546,520 610,535.5Q674,551 736,582Q765,597 782.5,625.5Q800,654 800,688L800,720Q800,753 776.5,776.5Q753,800 720,800L240,800Q207,800 183.5,776.5Q160,753 160,720ZM240,720L720,720L720,688Q720,677 714.5,668Q709,659 700,654Q646,627 591,613.5Q536,600 480,600Q424,600 369,613.5Q314,627 260,654Q251,659 245.5,668Q240,677 240,688L240,720ZM480,400Q513,400 536.5,376.5Q560,353 560,320Q560,287 536.5,263.5Q513,240 480,240Q447,240 423.5,263.5Q400,287 400,320Q400,353 423.5,376.5Q447,400 480,400ZM480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320Q480,320 480,320ZM480,720L480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720Q480,720 480,720L480,720L480,720Z"/>
+                        <path d="M640,320Q640,386 593,433Q546,480 480,480Q414,480 367,433Q320,386 320,320Q320,254 367,207Q414,160 480,160Q546,160 593,207Q640,254 640,320Z"/>
+                        <path d="M160,720L160,688Q160,654 177.5,625.5Q195,597 224,582Q286,551 350,535.5Q414,520 480,520Q546,520 610,535.5Q674,551 736,582Q765,597 782.5,625.5Q800,654 800,688L800,720Q800,753 776.5,776.5Q753,800 720,800L240,800Q207,800 183.5,776.5Q160,753 160,720Z"/>
+                        <path d="M240,720L720,720L720,688Q720,677 714.5,668Q709,659 700,654Q646,627 591,613.5Q536,600 480,600Q424,600 369,613.5Q314,627 260,654Q251,659 245.5,668Q240,677 240,688L240,720Z"/>
+                        <path d="M480,400Q513,400 536.5,376.5Q560,353 560,320Q560,287 536.5,263.5Q513,240 480,240Q447,240 423.5,263.5Q400,287 400,320Q400,353 423.5,376.5Q447,400 480,400Z"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <div class="input-group mb-3">
+                <input type="email" id="email" name="email" required class="form-control">
+                <span class="input-group-text email-icon"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <div class="input-group mb-3">
+                <input type="password" id="password" name="password" required class="form-control">
+                <span class="input-group-text password-icon"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn-login">Criar Conta</button>
+    </form>
+
+    <div class="create-account">
+        Já tem uma conta? <a href="sign.html">Fazer login</a>
+    </div>
+    <div id="error-message" class="error-message"></div>
+    <div id="success-message" class="success-message"></div>
+</div>
+
+<!-- Adicione o script do Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="js/sign_up.js"></script>
+</body>
+</html>

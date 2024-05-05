@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redefinir Senha</title>
+<link href="./css/reset_pass.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="login-container">
+
+    <p class="login-title">Redefinir Senha</p>
+        <p class="login-description">Digite seu e-mail para redefinir a senha.</p>
+
+    <form id="reset-password-form">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <div class="input-group mb-3">
+                <input type="email" id="email" name="email" required class="form-control">
+                <span class="input-group-text" style="width: 25px; height: 25px; color: #9e9e9e;">
+                    <span class="input-group-text" style="width: 25px; height: 25px;"><img src="./icons/email.png" alt="Envelope Icon"></span>
+                </span>
+            </div>
+        </div>
+        <button type="submit" class="btn-reset-password">Redefinir Senha</button>
+    </form>
+    
+    <div class="error-message"></div>
+    <div class="success-message"></div>
+</div>
+
+<!-- Adicione o script do Firebase versão 8.x -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="./js/detectDevTools.js"></script>
+<script>
+// Configurações do Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyCkNPnRVpxAvMBBoqWUlTA5aIofG2HWvss",
+  authDomain: "animaalley-tv.firebaseapp.com",
+  databaseURL: "https://animaalley-tv-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "animaalley-tv",
+  storageBucket: "animaalley-tv.appspot.com",
+  messagingSenderId: "441876450757",
+  appId: "1:441876450757:web:23f14baf5c10ecc46acfac",
+  measurementId: "G-BCH5BV87FN"
+};
+
+// Inicialize o Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+// Adicione um evento de envio ao formulário de redefinição de senha
+document.getElementById('reset-password-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+    const email = document.getElementById('email').value;
+
+    // Enviar e-mail de redefinição de senha
+    auth.sendPasswordResetEmail(email)
+        .then(() => {
+            // Limpar mensagens de erro
+            document.querySelector('.error-message').textContent = '';
+            // Exibir mensagem de sucesso
+            document.querySelector('.success-message').textContent = 'E-mail de redefinição de senha enviado. Verifique sua caixa de entrada.';
+            // Limpar campo de e-mail
+            document.getElementById('email').value = '';
+        })
+        .catch((error) => {
+            // Exibir mensagem de erro
+            document.querySelector('.error-message').textContent = error.message;
+        });
+});
+</script>
+</body>
+</html>

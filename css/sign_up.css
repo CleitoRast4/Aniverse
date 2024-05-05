@@ -1,0 +1,150 @@
+
+    body {
+        background-color: #030303;
+        font-family: Arial, sans-serif;
+        color: #ccc;
+        background: url('../images/wall_sign.png') center center / cover no-repeat;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-container {
+        width: 300px;
+        margin: 100px auto;
+        padding: 10px 20px 20px 20px;
+        background-color: #101010;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .login-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: none;
+    }
+
+    .form-group input {
+        width: calc(100% - 0px);
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #131313;
+        padding-left: 35px;
+        box-sizing: border-box;
+        background-color: #131313;
+        color: #fff;
+        outline: none;
+    }
+
+    .input-group {
+        position: relative;
+    }
+
+    .input-group-text {
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.3s ease;
+        color: #9e9e9e; 
+    }
+
+    .input-group-text img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-group input:focus {
+    border-color: #612086;
+    box-shadow: 0 0 0 2px rgba(97, 32, 134, 0.384);
+    outline: none; 
+}
+
+    .input-group input:focus + .input-group-text {
+        color: #4285F4;
+    }
+
+    .btn-login {
+        width: 80%;
+        padding: 10px;
+        background-color: #612086;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+        margin-bottom: 15px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .btn-login:hover {
+        background-color: #3c1453;
+    }
+
+    .error-message {
+        color: #ff0000;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .success-message {
+        color: #008000;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .login-container .create-account,
+    .forgot-password {
+        text-align: center;
+        color: #fff;
+        margin-top: 15px;
+    }
+
+    .login-container .create-account a {
+        color: #612086;
+        text-decoration: none;
+    }
+
+    .login-container .create-account a:hover {
+        text-decoration: underline;
+    }
+
+    .login-title {
+        text-align: center; 
+        color: #612086; 
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .login-description {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    /* Ícones personalizados */
+    .input-group-text.email-icon {
+        background-image: url('../icons/email.png');
+        background-size: cover;
+    }
+
+    .input-group-text.password-icon {
+        background-image: url('../icons/password.png');
+        background-size: cover;
+    }

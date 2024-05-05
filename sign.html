@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aniversite | Login</title>
+<link href="./css/sign.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="login-container">
+    <p class="login-title">Aniverse</p>
+        <p class="login-description">Faça login para acessar sua conta.</p>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <div class="input-group mb-3">
+                <input type="email" id="email" name="email" required class="form-control">
+                <span class="input-group-text" style="width: 25px; height: 25px;"><img src="icons/email.png" alt="Envelope Icon"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <div class="input-group mb-3">
+                <input type="password" id="password" name="password" required class="form-control">
+                <span class="input-group-text" style="width: 25px; height: 25px;"><img src="icons/password.png" alt="Lock Icon"></span>
+            </div>
+        </div>
+        <div class="forgot-password">
+            Esqueceu a senha? <span id="forgot-password-link">Redefinir</span>
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+    </form>
+    
+    <div class="create-account">
+        Não tem uma conta? <a href="#" id="create-account-link">Criar agora</a>
+    </div>
+    <div id="error-message" class="error-message"></div>
+    <div id="success-message" class="success-message"></div>
+</div>
+
+
+<div id="custom-dialog">
+    <div id="dialog-image-container">
+        <img id="dialog-image" src="." alt="Imagem Personalizada">
+        <span id="close-dialog">&times;</span>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="js/sign.js"></script>
+</body>
+</html>

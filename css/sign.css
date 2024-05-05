@@ -1,0 +1,205 @@
+body {
+    background-color: #030303;
+    font-family: Arial, sans-serif;
+    color: #ccc;
+    background: url('../images/wall_sign.png') center center / cover no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #272727;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Adicionado para posicionamento absoluto */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Cor do título */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: none; /* Oculta o rótulo padrão */
+}
+
+.form-group input {
+    width: calc(100% - 0px); /* Ajuste para o tamanho do ícone */
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #131313; /* Cor da borda */
+    padding-left: 35px; /* Espaçamento para o ícone */
+    box-sizing: border-box; /* Incluir padding no tamanho total */
+    background-color: #131313; /* Cor de fundo do input */
+    color: #fff; /* Cor do texto dentro do input */
+    outline: none; /* Remove a borda ao focar */
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-text {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease; /* Transição suave da cor */
+    color: #ccc; /* Cor padrão do ícone */
+}
+
+.input-group-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.form-group input:focus {
+border-color: #612086; /* Cor da borda ao selecionar */
+box-shadow: 0 0 0 2px rgba(97, 32, 134, 0.384); /* Sombra para destacar o input */
+outline: none; /* Remove a borda padrão ao focar */
+}
+
+
+.input-group input:focus + .input-group-text {
+    color: #4285F4; /* Cor do ícone ao selecionar */
+}
+
+.btn-login {
+    width: 80%;
+    padding: 10px;
+    background-color: #612086;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 15px; /* Adicionado espaço abaixo do botão */
+    display: block; /* Torna o botão um elemento de bloco */
+    margin: 0 auto; /* Margem automática nas laterais para centralizar */
+}
+
+.btn-login:hover {
+    background-color: #3c1453;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success-message {
+    color: #008000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.create-account,
+.forgot-password {
+    text-align: center;
+    color: #fff; /* Cor do texto */
+    margin-top: 15px; /* Adicionado espaço acima */
+}
+
+.create-account a {
+    color: #612086;
+    text-decoration: none;
+}
+
+
+.forgot-password span {
+    color: #612086; /* Cor verde */
+    text-decoration: none;
+}
+
+.create-account a:hover,
+.forgot-password span:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo específico para o texto 'Esqueceu a senha? Redefinir' */
+.forgot-password {
+    margin-top: 5px; /* Espaço maior acima do texto */
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Estilo específico para o campo de e-mail */
+.create-account {
+margin-top: 20px; /* Espaço acima do campo */
+margin-bottom: 10px; /* Espaço abaixo do campo */
+font-size: 14px;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #101010;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.login-title {
+text-align: center; 
+color: #612086; 
+font-size: 30px;
+font-weight: bold; /* Letras em negrito */
+margin-bottom: 10px; /* Adicionado espaço abaixo do título */
+}
+
+.login-description {
+text-align: center; /* Alinha o texto ao centro */
+color: #fff; /* Cor do texto */
+margin-bottom: 20px; /* Espaço abaixo do texto */
+}
+
+/* Estilos para o diálogo personalizado */
+#custom-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
+    z-index: 1000;
+}
+
+#dialog-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#dialog-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    border-radius: 20px; /* Borda arredondada */
+}
+
+#close-dialog {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
